@@ -2,7 +2,7 @@ container:
   image: node:latest
 
 info_task:
-  info_script: echo 'Check-in on branch $CIRRUS_BRANCH. Base branch is $CIRRUS_BASE_BRANCH.'
+  info_script: echo "Check-in on branch" $CIRRUS_BRANCH ". Base branch is" $CIRRUS_BASE_BRANCH.
 
 test_task:
   only_if: $CIRRUS_PR != ''
