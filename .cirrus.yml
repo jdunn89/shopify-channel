@@ -1,9 +1,9 @@
 container:
   image: node:latest
 
-sut_task:
+unit_tests_task:
   node_modules_cache:
     folder: node_modules
     fingerprint_script: cat package-lock.json
     populate_script: npm install
-  sut_script: npm run test
+  unit_tests_script: npm run test
