@@ -2,7 +2,6 @@ container:
   image: node:latest
 
 test_task:
-  only_if: $CIRRUS_PR != ''
   node_modules_cache:
     folder: node_modules
     fingerprint_script: cat package-lock.json
