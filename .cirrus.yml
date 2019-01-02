@@ -2,7 +2,6 @@ container:
   image: node:latest
 
 test_task:
-  auto_cancellation: $CIRRUS_BRANCH != 'master' && $CIRRUS_BRANCH != 'development'
   only_if: $CIRRUS_PR != ''
   node_modules_cache:
     folder: node_modules
