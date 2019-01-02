@@ -1,13 +1,9 @@
 container:
   image: node:latest
 
-#info_task:
-  #info_script: echo Check-in on branch $CIRRUS_BRANCH. Base branch is $CIRRUS_BASE_BRANCH.
-
-test_task:
-  only_if: $CIRRUS_PR != ''
+sut_task:
   node_modules_cache:
     folder: node_modules
     fingerprint_script: cat package-lock.json
     populate_script: npm install
-  script: npm run test
+  sut_script: npm run test
