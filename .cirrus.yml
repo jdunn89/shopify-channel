@@ -1,15 +1,14 @@
 container:
   image: node:latest
 
-cache_modules_task:
-  node_modules_cache:
-    folder: node_modules
-    fingerprint_script: cat package-lock.json
-    populate_script: npm install
-    
 unit_test_task:
   container:
     matrix:
       image: node:latest
       image: node:8.3.0
+  node_modules_cache:
+    folder: node_modules
+    fingerprint_script: cat package-lock.json
+    populate_script: npm install
   unit_test_script: npm test
+    
