@@ -3,9 +3,8 @@ container:
 
 unit_test_task:
   container:
-    matrix:
-      image: node:latest
-      image: node:8.3.0
+    cpu: 1
+    memory: 1G
   node_modules_cache:
     folder: node_modules
     fingerprint_script: cat package-lock.json
