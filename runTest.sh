@@ -5,7 +5,8 @@ function run_tests {
   echo "Begin Running Tests "
   echo "**********************************************"
 
-  /sdk/node_modules/mocha/bin/mocha --timeout 10000 validation/*.spec.js
+  nyc ./node_modules/mocha/bin/mocha --timeout 10000 ./node_modules/@nchannel/endpoint-sdk/validation/*.spec.js
+  nyc report --reporter=text-lcov | coveralls
 
   echo "**********************************************"
   echo "End Running Tests "
