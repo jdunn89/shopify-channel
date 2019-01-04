@@ -8,7 +8,7 @@
     "lodash": "^4.17.4"
   },
   "scripts": {
-    "test": "runTest.sh"
+    "test": "./runTest.sh"
   },
   "version": "0.0.29",
   "main": "Shopify.js",
