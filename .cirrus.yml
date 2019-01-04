@@ -12,4 +12,4 @@ unit_test_task:
     folder: node_modules
     fingerprint_script: cat package-lock.json
     populate_script: npm install
-  unit_test_script: runTest.sh   
+  unit_test_script: ./runTest.sh   
