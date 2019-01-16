@@ -1,7 +1,6 @@
 # nc-template-channel
 
 Template channel for SDK development
-
 # Modifying the doc `docs.json` file
 
 ## Required Parameters
